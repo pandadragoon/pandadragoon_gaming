@@ -1,0 +1,20 @@
+
+.footer
+  %ul
+    %li
+      = link_to "Home |", "#"
+    %li
+      = link_to "Blog |"
+    %li
+      = link_to "Stream |"
+    %li
+      = link_to "About"
+  %ul.social-footer
+    %li
+      = link_to "", "#", class: 'icon-googleplus', title: 'Follow Google Plus'
+    %li
+      = link_to "", "#", class: 'icon-facebook', title: 'Follow Facebook'
+    %li
+      = link_to "", "#", class: 'icon-twitter', title: 'Follow Twitter'
+  %p.text-center
+    &copy; Josh Edwards #{Time.now.year}

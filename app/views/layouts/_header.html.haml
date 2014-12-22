@@ -1,0 +1,45 @@
+.top-nav
+  %nav.navbar.navbar-default(role="navigation")
+    %div.container-fluid
+      %div.navbar-header
+        %button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#navbar-collapse-1")
+          %span.sr-only Toggle navigate
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        = image_tag("nav-logo.png", class: "pull-left logo")
+        = link_to "Pandadragoon Gaming", root_path, class: "navbar-brand logo-text"
+      %div.collapse.navbar-collapse#navbar-collapse-1
+        %ul.nav.navbar-nav.link-nav
+          %li
+            = link_to "Home", "#", title: 'Home'
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", role: "button", "aria-expanded" => "false"}
+              Blog
+              %span.caret
+            %ul.dropdown-menu.drop-list{ role: "menu"}
+              %li
+                = link_to "All Articles", "#", title: "All articles"
+              %li
+                = link_to "Hearthstone", "#", title: "Hearthstone Articles"
+              %li
+                = link_to "Heroes of the Storm", "#", title: "Heroes of the Storm Articles"
+          %li
+            = link_to "Stream", "#", title: 'Stream'
+          %li
+            = link_to "About", "#", title: 'About'
+        %form.navbar-form.navbar-right.search
+          %div.form-group
+            %input.form-control(type="text")
+          %button.btn.btn-primary(type="submit") Search
+        %ul.nav.navbar-nav.social-nav
+          %li
+            = link_to "", "#", class: 'icon-googleplus', title: 'Follow Google Plus'
+          %li
+            = link_to "", "#", class: 'icon-facebook', title: 'Follow Facebook'
+          %li
+            = link_to "", "#", class: 'icon-twitter', title: 'Follow Twitter'
+          %li
+            %p.navbar-text.recent
+              Recent:
+              = link_to "Most Recent Article", "#", title: 'Most Recent Article'

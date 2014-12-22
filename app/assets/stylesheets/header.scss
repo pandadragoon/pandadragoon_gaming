@@ -1,0 +1,49 @@
+$margin-center: 30px;
+
+.social-nav {
+  font-size: 1.25em;
+  margin-top: $margin-center;
+}
+
+.link-nav {
+  margin-top: $margin-center;
+
+}
+
+.logo-text {
+  margin-top: $margin-center;
+}
+
+.navbar {
+  height: 120px;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.search {
+  margin-top: $margin-center;
+}
+
+@media screen and (max-width: 950px) {
+  .search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .navbar-collapse {
+    background-color: black;
+  }
+  .social-nav {
+    display: none;
+  }
+  .link-nav {
+    text-align: center;
+    font-size: 2em;
+  }
+  .drop-list li a {
+    text-align: center;
+  }
+}
