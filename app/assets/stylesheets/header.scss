@@ -26,18 +26,25 @@ $margin-center: 30px;
   margin-top: $margin-center;
 }
 
+@media screen and (max-width: 1050px){
+  .navbar-text {
+    color: #222 !important;
+  }
+}
 @media screen and (max-width: 950px) {
   .search {
     display: none;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .social-nav {
+    display: none;
+  }
+}
 @media screen and (max-width: 760px) {
   .navbar-collapse {
     background-color: black;
-  }
-  .social-nav {
-    display: none;
   }
   .link-nav {
     text-align: center;

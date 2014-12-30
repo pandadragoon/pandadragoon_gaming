@@ -1,0 +1,25 @@
+.show-article {
+  margin: 10px 0;
+  box-shadow: 5px 5px 5px #888888;
+  background-color: #222;
+  img {
+    width: 100%;
+  }
+  .content {
+    padding: 10px;
+    p {
+      margin-right: 10px;
+      color: #ccc;
+      font-family: 'Lora', serif;
+    }
+    span {
+      color: #5c5c5c;
+    }
+  }
+  h2 {
+    color: #DF691A;
+  }
+  h3 {
+    color: #5c5c5c;
+  }
+}
