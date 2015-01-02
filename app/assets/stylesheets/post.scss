@@ -1,9 +1,12 @@
+@import "variables.scss";
 .show-article {
-  margin: 10px 0;
-  box-shadow: 5px 5px 5px #888888;
-  background-color: #222;
+  margin: 20px 0;
+  box-shadow: 5px 5px 5px #000;
+  background-color: $dark-background;
+  border-radius: 5px;
   img {
     width: 100%;
+    border-radius: 5px 5px 0 0;
   }
   .content {
     padding: 10px;

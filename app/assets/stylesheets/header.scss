@@ -1,3 +1,4 @@
+@import "variables.scss";
 $margin-center: 30px;
 
 .social-nav {
@@ -16,6 +17,8 @@ $margin-center: 30px;
 
 .navbar {
   height: 120px;
+  background-color: $dark-background;
+  border-bottom: none;
 }
 
 .logo {

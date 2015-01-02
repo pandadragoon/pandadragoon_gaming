@@ -1,17 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Lora);
-
+@import "variables.scss";
 .article {
-  margin: 10px 0;
-  box-shadow: 5px 5px 5px #888888;
+  margin: 20px 0;
+  box-shadow: 5px 5px 5px #000;
   border-radius: 5% 0 0 5%;
-  background-color: #222;
+  background-color: $dark-background;
   img {
     float: left;
     margin-right: 10px;
     border-radius: 5% 0 0 5%;
   }
   .content {
-    border-top: 1px solid black;
     border-radius: 5% 0 0 5%;
     p {
       margin-right: 10px;

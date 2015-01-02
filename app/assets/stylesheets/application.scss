@@ -52,5 +52,9 @@
    color: $feedCol;
  }
 body {
-  background-image: asset-url("01-whitepaper.png", image);
+  background-image: asset-url("background.jpg", image);
+}
+
+.twitch {
+  background-color: $dark-background;
 }
