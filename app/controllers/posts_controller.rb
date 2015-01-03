@@ -1,12 +1,13 @@
 class PostsController < ApplicationController
-  before_action :require_user, only: [:create, :destroy]
+  before_action :require_user, only: [:create, :destroy, :update, :edit]
+  before_action :set_post, only: [:edit, :update, :show, :destroy]
 
   def index
     @posts = Post.all.limit(20)
   end
 
   def show
-    @post = Post.find(params[:id])
+
   end
 
   def create
@@ -20,9 +21,22 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
+  def update
+
+    if @post.update(post_params)
+      flash[:notice] = "Your review was updated"
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
   def destroy
-    post = Post.find(params[:id])
-    if post.delete
+    if @post.delete
       flash[:success] = "Post was deleted."
       redirect_to root_path
     else
@@ -32,7 +46,6 @@ class PostsController < ApplicationController
   end
 
   def heroes
-
     @posts = Post.where(category: Category.where(name: "Heroes of the Storm")).all.limit(20)
   end
 
@@ -44,6 +57,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:body, :description, :title, :banner_lg, :banner_sm, :tagline, :category_id)
+  end
+
+  def set_post
+    @post = Post.find_by(slug: params[:id])
   end
 
 end

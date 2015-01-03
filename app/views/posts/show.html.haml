@@ -11,6 +11,11 @@
         =link_to @post.user.name, about_path
         %span
           = @post.created_datetime
+        - if logged_in?
+          %p
+            =link_to "[Delete Post]", post_path(@post), method: 'delete', class: "text-danger"
+            =link_to "[Edit Post]", edit_post_path(@post), class: "text-info"
+
       %p
         = simple_format(@post.body)
         .text-center

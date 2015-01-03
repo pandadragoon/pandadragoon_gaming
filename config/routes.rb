@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'posts#index'
   get 'ui(/:action)', controller: 'ui'
-  resources :posts, only: [:index, :show, :create, :destroy]
+  resources :posts
   get 'about', to: 'pages#about'
   get 'stream', to: 'pages#stream'
   get 'hearthstone', to: 'posts#hearthstone'
