@@ -1,4 +1,41 @@
 -# something introductory here about pandadragoon gaming in general
+.container
+  %h1.text-center.about-title
+    Pandadragoon Gaming
+  .pg-about
+    = image_tag "about-logo.png", class: "pull-right"
+    %p.clearfix.text-justify
+      Pandadragoon Gaming is a website devoted to Hearthstone and Heroes of the Storm news, strategy, and streaming. PD Gaming strives to provide up to date and helpful tips, tricks, and insights into both the competitve and casual scene of both Hearthstone and Heroes of the Storm.  While always trying to be informative PD Gaming, like most pandas, believes you shouldn't always take things seriously. After all, it is just a game.  In addition to providing articles, PD Gaming also runs a
+      = link_to "twitch stream", "http://twitch.tv/pandadragoon_gaming"
+      that casts Hearthstone and Heroes of the Storm gameplay regularly.
 
-- @users.each do |user|
-  -# use user model to create mini profile for site staff
+    
+  %h1.text-center.about-title
+    Team Pandadragoon
+  - @users.each do |user|
+    .team-profile
+      = image_tag(user.pic_url, class: "team-pic")
+      %dl
+        %dt Name:
+        %dd
+          = user.name
+        %dt Handle:
+        %dd
+          = user.username
+        %dt Email:
+        %dd
+          = user.email
+        %dt Twitch
+        %dd
+          = link_to user.twitch, user.twitch
+        %dt Facebook
+        %dd
+          = link_to user.facebook, user.facebook
+        %dt Twitter
+        %dd
+          = link_to user.twitter, user.twitter
+        %dt About:
+        %dd
+          = user.description
+
+    -# use user model to create mini profile for site staff

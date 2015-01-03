@@ -1,0 +1,47 @@
+@import "variables.scss";
+.about-title {
+  color: $title-color;
+}
+.pg-about{
+  //background-image: image-url("01-whitepaper.png");
+  background-color: $dark-background;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: 'Lora', serif;
+  color: $text-color;
+  p {
+    margin: 20px 20px 0 20px;
+  }
+  img {
+    margin-left: 20px;
+    height: 200px;
+  }
+}
+
+.team-profile {
+  font-family: 'Lora', serif;
+  color: $text-color;
+  background: $dark-background;
+  padding: 20px;
+  margin-bottom: 20px;
+  dl dt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: $title-color;
+  }
+}
+
+.team-pic {
+  border-radius: 50%;
+  margin-right: 25%;
+  margin-top: 20px;
+  border: 5px solid white;
+  float: right;
+}
+
+
+@media screen and (max-width: 768px) {
+  .team-pic {
+    margin-right: 0;
+  }
+}
