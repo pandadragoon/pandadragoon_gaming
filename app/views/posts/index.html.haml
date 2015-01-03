@@ -1,0 +1,17 @@
+.container
+  <a href="http://twitch.tv/pandorzilla"><img class="twitch" src="http://streambadge.com/twitch/dark/pandorzilla.png" alt="pandorzilla's Streambadge"></a>
+  - @posts.each do |post|
+    %section.article.clearfix
+      = image_tag "#{post.banner_sm}"
+      .content.clearfix
+        %h3
+          = post.tagline
+        %h2
+          = link_to post.title, post_path(post)
+        %p
+          =link_to "#{post.user.name}", about_path
+          %span
+            = post.created_datetime
+        %p
+          = post.description
+          =link_to "Read More", post_path(post)

@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'haml'
+gem 'bootstrap_form'
+gem 'bcrypt'
 group :development do
   gem 'sqlite3'
   gem 'pry'

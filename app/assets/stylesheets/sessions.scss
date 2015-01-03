@@ -1,0 +1,11 @@
+@import "variables.scss";
+.login-wrap {
+  background-color: $dark-background;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: $text-color;
+}
+
+.login-title {
+  color: $title-color;
+}

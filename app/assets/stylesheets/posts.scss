@@ -14,18 +14,23 @@
     border-radius: 5% 0 0 5%;
     p {
       margin-right: 10px;
-      color: #ccc;
+      color: $text-color;
       font-family: 'Lora', serif;
     }
     span {
-      color: #5c5c5c;
+      color: $highlight;
     }
   }
   h2 {
-    color: #DF691A;
+    a {
+      color: $title-color;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   h3 {
-    color: #5c5c5c;
+    color: $highlight;
   }
 }
 
@@ -39,6 +44,14 @@
     }
     .content{
       border: none;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .article {
+    img {
+      display: none;
     }
   }
 }

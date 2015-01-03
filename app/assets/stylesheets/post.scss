@@ -9,20 +9,20 @@
     border-radius: 5px 5px 0 0;
   }
   .content {
-    padding: 10px;
+    padding: 20px;
     p {
       margin-right: 10px;
-      color: #ccc;
+      color: $text-color;
       font-family: 'Lora', serif;
     }
     span {
-      color: #5c5c5c;
+      color: $highlight;
     }
   }
   h2 {
-    color: #DF691A;
+    color: $title-color;
   }
   h3 {
-    color: #5c5c5c;
+    color: $highlight;
   }
 }

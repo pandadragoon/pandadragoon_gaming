@@ -1,0 +1,19 @@
+@import "variables.scss";
+.logout-btn {
+  display: inline;
+  a {
+    color: white;
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.admin-panel {
+  background-color: $dark-background;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  padding: 10px;
+  color: $text-color;
+}

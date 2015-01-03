@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
-  root 'ui#index'
+  root 'posts#index'
   get 'ui(/:action)', controller: 'ui'
+  resources :posts, only: [:index, :show, :create, :destroy]
+  get 'about', to: 'pages#about'
+  get 'stream', to: 'pages#stream'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  resources :admin, only: [:index]
 end

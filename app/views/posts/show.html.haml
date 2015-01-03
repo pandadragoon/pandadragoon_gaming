@@ -1,0 +1,17 @@
+.container
+  <a href="http://twitch.tv/pandorzilla"><img class="twitch" src="http://streambadge.com/twitch/dark/pandorzilla.png" alt="pandorzilla's Streambadge"></a>
+  %section.show-article.clearfix
+    = image_tag "#{@post.banner_lg}"
+    .content.clearfix
+      %h3
+        = @post.tagline
+      %h2
+        = @post.title
+      %p
+        =link_to @post.user.name, about_path
+        %span
+          = @post.created_datetime
+      %p
+        = simple_format(@post.body)
+        .text-center
+          = link_to "<< Back", posts_path
