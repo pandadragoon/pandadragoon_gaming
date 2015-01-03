@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   before_action :require_user, only: [:create, :destroy]
-  
+
   def index
-    @posts = Post.all
+    @posts = Post.all.limit(20)
   end
 
   def show
@@ -31,10 +31,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def heroes
+
+    @posts = Post.where(category: Category.where(name: "Heroes of the Storm")).all.limit(20)
+  end
+
+  def hearthstone
+    @posts = Post.where(category: Category.where(name: "Hearthstone")).all.limit(20)
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:body, :description, :title, :banner_lg, :banner_sm, :tagline)
+    params.require(:post).permit(:body, :description, :title, :banner_lg, :banner_sm, :tagline, :category_id)
   end
 
 end

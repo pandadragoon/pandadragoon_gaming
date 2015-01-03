@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :show, :create, :destroy]
   get 'about', to: 'pages#about'
   get 'stream', to: 'pages#stream'
+  get 'hearthstone', to: 'posts#hearthstone'
+  get 'heroes', to: 'posts#heroes'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
