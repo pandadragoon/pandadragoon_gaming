@@ -5,8 +5,13 @@ class Post < ActiveRecord::Base
   belongs_to :user
 
   sluggable_column :title
-  
+
   def created_datetime
     created_at.strftime("%B, %d %Y - %I:%M %p %Z")
+  end
+
+  def self.search_by_title(search_term)
+    return [] if search_term.blank?
+    where("title LIKE ?", "%#{search_term}%").order("created_at DESC")
   end
 end

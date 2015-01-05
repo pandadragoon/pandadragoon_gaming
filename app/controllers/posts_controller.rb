@@ -53,6 +53,10 @@ class PostsController < ApplicationController
     @posts = Post.where(category: Category.where(name: "Hearthstone")).all.limit(20)
   end
 
+  def search
+    @posts = Post.search_by_title(params[:search])
+  end
+
   private
 
   def post_params

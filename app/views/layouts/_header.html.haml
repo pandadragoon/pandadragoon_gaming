@@ -28,10 +28,14 @@
             = link_to "Stream", stream_path, title: 'Stream'
           %li
             = link_to "About", about_path, title: 'About'
-        %form.navbar-form.navbar-right.search
-          %div.form-group
-            %input.form-control(type="text")
+        = form_tag search_path, method: 'get', class: "navbar-right search navbar-form" do
+          .form-group
+            %input.form-control(type="text" name="search" placeholder="Search for articles")
           %button.btn.btn-info(type="submit") Search
+        -# %form.navbar-form.navbar-right.search
+        -#   %div.form-group
+        -#     %input.form-control(type="text")
+        -#   %button.btn.btn-info(type="submit") Search
         %ul.nav.navbar-nav.social-nav
           %li
             = link_to "", "#", class: 'icon-googleplus', title: 'Follow Google Plus'
