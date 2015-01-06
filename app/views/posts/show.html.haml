@@ -1,7 +1,10 @@
+
 .container
   <a href="http://twitch.tv/pandadragoon_gaming"><img class="twitch" src="http://streambadge.com/twitch/dark/pandadragoon_gaming.png" alt="pandorzilla's Streambadge"></a>
+  = render "shared/adh"
   %section.show-article.clearfix
     = image_tag "#{@post.banner_lg}"
+
     .content.clearfix
       %h3
         = @post.tagline
@@ -15,7 +18,7 @@
           %p
             =link_to "[Delete Post]", post_path(@post), method: 'delete', class: "text-danger"
             =link_to "[Edit Post]", edit_post_path(@post), class: "text-info"
-
+      = render "shared/adv"
       %p
         = simple_format(@post.body)
         .text-center

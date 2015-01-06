@@ -4,9 +4,13 @@
   box-shadow: 5px 5px 5px #000;
   background-color: $dark-background;
   border-radius: 5px;
-  img {
+  > img {
     width: 100%;
     border-radius: 5px 5px 0 0;
+  }
+
+  .ad {
+    margin-left: 20px;
   }
   .content {
     padding: 20px;

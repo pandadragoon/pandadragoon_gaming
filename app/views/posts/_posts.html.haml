@@ -1,5 +1,8 @@
+
+
 .container
   <a href="http://twitch.tv/pandadragoon_gaming"><img class="twitch" src="http://streambadge.com/twitch/dark/pandadragoon_gaming.png" alt="pandorzilla's Streambadge"></a>
+  = render "shared/adh"
   - @posts.each do |post|
     %section.article.clearfix
       = image_tag "#{post.banner_sm}"
