@@ -10,14 +10,9 @@
   }
   .content {
     padding: 20px;
-    p {
-      margin-right: 10px;
-      color: $text-color;
-      font-family: 'Lora', serif;
-      div {
-        color: $text-color;
-      }
-    }
+    margin-right: 10px;
+    color: $text-color;
+    font-family: 'Lora', serif;
     span {
       color: $highlight;
     }
