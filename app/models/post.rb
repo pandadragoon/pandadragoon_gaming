@@ -6,6 +6,8 @@ class Post < ActiveRecord::Base
 
   sluggable_column :title
 
+  default_scope { order('created_at DESC') }
+
   def created_datetime
     created_at.strftime("%B, %d %Y - %I:%M %p %Z")
   end
