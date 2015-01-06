@@ -1,7 +1,10 @@
 
 .container
-  <a href="http://twitch.tv/pandadragoon_gaming"><img class="twitch" src="http://streambadge.com/twitch/dark/pandadragoon_gaming.png" alt="pandorzilla's Streambadge"></a>
-  = render "shared/adh"
+  .row.ad-main
+    .col-lg-8
+      = render "shared/adh"
+    .col-lg-4
+      <a href="http://twitch.tv/pandadragoon_gaming"><img class="twitch clearfix" src="http://streambadge.com/twitch/dark/pandadragoon_gaming.png" alt="pandorzilla's Streambadge"></a>
   %section.show-article.clearfix
     = image_tag "#{@post.banner_lg}"
 

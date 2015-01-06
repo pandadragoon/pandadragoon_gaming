@@ -46,4 +46,4 @@
           %li
             %p.navbar-text.recent
               Recent:
-              = link_to "#{Post.last.title}", post_path(Post.last), title: '#{Post.last.title}'
+              = link_to "#{Post.first.title}", post_path(Post.first), title: '#{Post.first.title}'
