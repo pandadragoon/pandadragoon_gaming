@@ -16,6 +16,9 @@ module PandaGaming
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     config.time_zone = 'Pacific Time (US & Canada)'
     config.autoload_paths += %W(#{config.root}/lib)
+    config.action_dispatch.default_headers = {
+      'X-Frame-Options' => 'ALLOWALL'
+    }
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
