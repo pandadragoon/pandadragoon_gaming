@@ -17,7 +17,7 @@ module PandaGaming
     config.time_zone = 'Pacific Time (US & Canada)'
     config.autoload_paths += %W(#{config.root}/lib)
     config.action_dispatch.default_headers = {
-      'X-Frame-Options' => 'ALLOWALL'
+      'X-Frame-Options' => ''
     }
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
